@@ -10,6 +10,7 @@ class SongsController < ApplicationController
 
   def edit
     @song = Song.find(params[:id])
+  end
 
   def create
 
@@ -22,8 +23,12 @@ class SongsController < ApplicationController
   def destroy
     Song.find(params[:id]).destroy
     redirect_to song_url
-*   end
+  end
+  
+  private
 
+  def song_params
+    params.permit(:title, :released, :release_year, :artist_name, :genre)
   end
 
 
