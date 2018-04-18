@@ -8,6 +8,9 @@ class SongsController < ApplicationController
     @song = Song.new
   end
 
+  def edit
+    @song = Song.find(params[:id])
+
   def create
 
   end
