@@ -1,3 +1,13 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Genre</th>
+      <th>Artist name</th>
+      <th></th>
+    </tr>
+  </thead>
 <tbody>
     <% @songs.each do |song| %>
       <tr>
@@ -6,6 +16,8 @@
         <td><%= song.genre %></td>
         <td><%= song.artist_name %></td>
       <%= link_to 'Delete', song, method: :delete, data: { confirm: 'confirm' } %></tr>
+    <% end %>
   </tbody>
+  </table.
 
-<% end %>
+
