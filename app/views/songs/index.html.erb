@@ -1,8 +1,8 @@
 <% @songs.each do |song| %>
-  <div><%= song.title %>
+  <tr><%= song.title %>
         <%= song.release_year %>
         <%= song.artist_name %>
         <%= song.genre %>
-      <%= link_to 'Delete', song, method: :delete, data: { confirm: 'confirm' } %></div>
+      <%= link_to 'Delete', song, method: :delete, data: { confirm: 'confirm' } %></tr>
 
 <% end %>
